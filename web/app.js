@@ -1,5 +1,7 @@
 const $ = (s) => document.querySelector(s);
-const STEP_MS = 700;
+const RECORD = new URLSearchParams(location.search).has("record");
+const STEP_MS = RECORD ? 1000 : 700; // slower in recording mode so captions can be read
+const TOUR_PAUSE_MS = RECORD ? 2500 : 1800;
 const TYPES = {
   clean: "Clean run: tools have the answer",
   A: "Planted: the final answer states something no tool returned",
@@ -14,7 +16,7 @@ const TOUR = [
 ];
 let DATA, playing = false;
 
-if (new URLSearchParams(location.search).has("record")) document.body.classList.add("record");
+if (RECORD) document.body.classList.add("record");
 const sleep = (ms) => new Promise((r) => setTimeout(r, matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : ms));
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
 const ticks = (s) => esc(s).replace(/`([^`]+)`/g, "<code>$1</code>");
@@ -80,12 +82,14 @@ async function play(run, caption) {
   for (let i = 0; i < run.steps.length; i++) {
     const li = renderStep(run, i, false);
     tl.append(li);
+    li.scrollIntoView({ block: "nearest", behavior: "smooth" });
     await sleep(STEP_MS / 2);
     li.replaceWith(renderStep(run, i, true));
     await sleep(STEP_MS / 2);
   }
   $("#summary").textContent = run.summary;
   $("#summary").hidden = false;
+  $("#summary").scrollIntoView({ block: "nearest", behavior: "smooth" });
 }
 
 async function guard(fn) {
@@ -108,7 +112,7 @@ $("#tour").onclick = () => guard(async () => {
   for (const [id, p, cap] of TOUR) {
     select(id, p);
     await play(DATA.runs[`${id}|${p}`], cap);
-    await sleep(1800);
+    await sleep(TOUR_PAUSE_MS);
   }
 });
 $("#how-open").onclick = () => $("#how").showModal();

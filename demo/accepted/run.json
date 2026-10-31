@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "config": "local source 01b7410a4f82",
+  "steps": [
+    {
+      "step": "web /Users/[user]/Documents/Take Homes/Latent/demo/storyboard.toml",
+      "ok": true,
+      "seconds": 76.7
+    },
+    {
+      "step": "edit /Users/[user]/Documents/Take Homes/Latent/demo/edit.toml",
+      "ok": true,
+      "seconds": 8.4
+    }
+  ],
+  "ok": true,
+  "unchecked": 43,
+  "flagged": 0,
+  "kept": [],
+  "scan_status": "completed",
+  "review_status": "completed",
+  "errors": [],
+  "inputs": {
+    "config_sha256": "aa4a7e369f7d3dde36b0976a8a562928c08a1792ae5eadb5864274a4cb6bdc17",
+    "reshoot": "0.3.13",
+    "stories": [
+      {
+        "sha256": "73ae6106fbaa4c84ae60d27126f202d815c914f6d7f7803b34a7c11f9de397de",
+        "kind": "web"
+      }
+    ],
+    "render_state": {
+      "schema_version": 1,
+      "sha256": "bee5d807b4e9f9da7aadbfd868448d098ac802d1889fc6cd16d6df8496d9f954",
+      "files": [
+        {
+          "key": "project",
+          "kind": "project",
+          "path": "reshoot.toml",
+          "sha256": "aa4a7e369f7d3dde36b0976a8a562928c08a1792ae5eadb5864274a4cb6bdc17"
+        },
+        {
+          "key": "take:0",
+          "kind": "story",
+          "path": "storyboard.toml",
+          "sha256": "73ae6106fbaa4c84ae60d27126f202d815c914f6d7f7803b34a7c11f9de397de"
+        },
+        {
+          "key": "edit",
+          "kind": "edit",
+          "path": "edit.toml",
+          "sha256": "0ebf8d6591928d55466a433f9c8e2c1403f44d29997d5d411de8df799160a38b"
+        }
+      ]
+    },
+    "capture_state": {
+      "schema_version": 1,
+      "sha256": "bee5d807b4e9f9da7aadbfd868448d098ac802d1889fc6cd16d6df8496d9f954",
+      "files": [
+        {
+          "key": "project",
+          "kind": "project",
+          "path": "reshoot.toml",
+          "sha256": "aa4a7e369f7d3dde36b0976a8a562928c08a1792ae5eadb5864274a4cb6bdc17"
+        },
+        {
+          "key": "take:0",
+          "kind": "story",
+          "path": "storyboard.toml",
+          "sha256": "73ae6106fbaa4c84ae60d27126f202d815c914f6d7f7803b34a7c11f9de397de"
+        },
+        {
+          "key": "edit",
+          "kind": "edit",
+          "path": "edit.toml",
+          "sha256": "0ebf8d6591928d55466a433f9c8e2c1403f44d29997d5d411de8df799160a38b"
+        }
+      ]
+    },
+    "fixtures": [],
+    "recording_config_sha256": "01954243c425c8a2454bea6e0673809c649ecdcb3d7660774c7b8fc594bca882",
+    "edit_sha256": "0ebf8d6591928d55466a433f9c8e2c1403f44d29997d5d411de8df799160a38b",
+    "tracked_diff_sha256": "3d60103dba51ac913d44ff1b744e6649c78e21aa661198c24289aa6eee2657ec",
+    "commit": "c7a8a2ecd542f0e5e3f6a0f2ed0fd9a71ff559c6",
+    "dirty": true,
+    "dirty_index_sha256": "05b0c157a5dc7bbaeebefe4f637b3b61c450f665114fc40da6315b1ced6561b2"
+  },
+  "id": "ea8c996f81c54c4caa2204f369df49b6",
+  "exports": {},
+  "mode": "final",
+  "review": "/Users/christopher/Documents/Take Homes/Latent/demo/takes/runs/ea8c996f81c54c4caa2204f369df49b6/review",
+  "seconds": 97.0,
+  "finished_at": "2026-10-31T18:48:29+00:00",
+  "files": [
+    {
+      "path": "takes/demo.take.json",
+      "sha256": "f3cc67d643144ef0dce7badc64d41f0131aa7de26b7549585867376fb0d4457f"
+    },
+    {
+      "path": "takes/demo.evidence/drawer_call_close.png",
+      "sha256": "8cc54fa13b618864abceed0e8e6f42bc760e2565f4eeeb2f4cd627f2064c0ab4"
+    },
+    {
+      "path": "takes/demo.evidence/tour_responses.png",
+      "sha256": "ec41b35b481bdef8648da541c5061fe2f876aca4e8438698304dedf7bd89c267"
+    },
+    {
+      "path": "takes/demo.evidence/drawer_answer.png",
+      "sha256": "188973ead75a4c6099197ae09e9647047480da67ea68dd1f3592bbabd71225ce"
+    },
+    {
+      "path": "takes/demo.evidence/result.png",
+      "sha256": "fc54b9d09ff737086008afd0edc3f4cd7f7cf8feee6d35692be6feab09c25ad7"
+    },
+    {
+      "path": "takes/demo.evidence/tour_fake_arg.png",
+      "sha256": "504054024bd8878207ccfcda794ece3c72d20223742b86158f659fc8a5898c53"
+    },
+    {
+      "path": "takes/demo.evidence/numbers.png",
+      "sha256": "a5851e4ae0d46e1aa92cc3e1ecbc99d496d4ec3353c3faa2c3bf4daa6448a2dc"
+    },
+    {
+      "path": "takes/demo.evidence/drawer_call.png",
+      "sha256": "fad3539cd6130b19dd584348e9e0f5f267caf22b9ec74ebcc59277b8be3df38e"
+    },
+    {
+      "path": "takes/demo.evidence/end.png",
+      "sha256": "fc54b9d09ff737086008afd0edc3f4cd7f7cf8feee6d35692be6feab09c25ad7"
+    },
+    {
+      "path": "takes/demo.evidence/tour_clean.png",
+      "sha256": "5c56c6aa504008a431025ae9c9fe56881b3e25229362b4f9ab59c21f6c370947"
+    },
+    {
+      "path": "takes/demo.evidence/replay_fake_arg.png",
+      "sha256": "d53a3dba9c4070fa357d2884f525c30b1abbc76b4bd2ff3bfdd3b18fd415699e"
+    },
+    {
+      "path": "takes/demo.evidence/drawer_answer_close.png",
+      "sha256": "8cc54fa13b618864abceed0e8e6f42bc760e2565f4eeeb2f4cd627f2064c0ab4"
+    }
+  ],
+  "expectations_status": "passed",
+  "expectations_count": 20,
+  "record": true
+}

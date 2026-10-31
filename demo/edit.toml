@@ -1,0 +1,11 @@
+schema_version = 1
+output = "demo-final.mp4"
+
+[[part]]
+take = 0
+start = 0
+end = "end"
+
+[[export]]
+preset = "readme"   # an 800x450 GIF, checked against GitHub's 10 MB limit
+fps = 8             # the ~70 s take is over 10 MB at the default 15 fps

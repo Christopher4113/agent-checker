@@ -1,0 +1,190 @@
+schema_version = 1
+id = "show-me-the-gap"
+url = "http://127.0.0.1:8767/?record=1"
+size = "1280x720@1"
+theme = "dark"
+
+[caption]
+min_seconds = 2
+
+[[beat]]
+id = "numbers"
+purpose = "The headline: what Latent catches on agent steps today vs with the adapter"
+caption = "Latent on agent steps: stock vs with latent_agents"
+sub = "Same agent, 24 tasks, 3 API paths. Real Latent scores."
+hold = 6
+[[beat.action]]
+type = "wait"
+target = {css = "#stats .stat:first-child"}
+[[beat.expect]]
+type = "text"
+target = {css = "#stats"}
+contains = "10/48"
+[[beat.expect]]
+type = "text"
+target = {css = "#stats"}
+contains = "18/18"
+
+[[beat]]
+id = "tour_responses"
+purpose = "Responses API final-answer hallucination: stock misses (no source), adapter catches"
+caption = "Responses API: the answer invents a date and an item"
+sub = "Stock sees no tool results and misses it. The adapter catches it."
+hold = 2
+[[beat.action]]
+type = "click"
+target = {css = "#tour"}
+[[beat.expect]]
+type = "text"
+target = {css = "#caption"}
+contains = "1/3"
+[[beat.expect]]
+type = "text"
+target = {css = "#summary"}
+contains = "Stock Latent: missed. With adapter: caught at step 4."
+timeout = 20000
+[[beat.expect]]
+type = "count"
+target = {css = ".step.first-bad"}
+count = 1
+
+[[beat]]
+id = "tour_fake_arg"
+purpose = "Invented tool argument: stock never scores the call, adapter flags it"
+caption = "The agent refunds an order the user never mentioned"
+sub = "Stock: not scored. With adapter: arg not grounded."
+hold = 2
+[[beat.expect]]
+type = "text"
+target = {css = "#caption"}
+contains = "2/3"
+timeout = 20000
+[[beat.expect]]
+type = "text"
+target = {css = "#summary"}
+contains = "Stock Latent: missed. With adapter: caught at step 4."
+timeout = 20000
+[[beat.expect]]
+type = "text"
+target = {css = ".step.first-bad"}
+contains = "arg not grounded"
+
+[[beat]]
+id = "tour_clean"
+purpose = "Clean run: both pass, so the adapter adds no false alarms"
+caption = "A clean run on Anthropic"
+sub = "Both pass: no false alarms."
+hold = 2.5
+[[beat.expect]]
+type = "text"
+target = {css = "#caption"}
+contains = "3/3"
+timeout = 20000
+[[beat.expect]]
+type = "text"
+target = {css = "#summary"}
+contains = "Stock Latent: clean. With adapter: clean."
+timeout = 20000
+[[beat.expect]]
+type = "count"
+target = {css = ".step.first-bad"}
+count = 0
+
+[[beat]]
+id = "replay_fake_arg"
+purpose = "Bring back the fake-tool-argument run to inspect it"
+caption = "Back to the wrong-order refund"
+hold = 1
+[[beat.action]]
+type = "select"
+target = {css = "#scenario"}
+option = "refund wrong real order (type B)"
+[[beat.action]]
+type = "click"
+target = {css = "input[value=chat] + span"}
+[[beat.action]]
+type = "click"
+target = {css = "#run"}
+[[beat.expect]]
+type = "text"
+target = {css = "#summary"}
+contains = "Stock Latent: missed. With adapter: caught at step 4."
+timeout = 20000
+
+[[beat]]
+id = "drawer_call"
+purpose = "The drawer shows the tool call was never sent to Latent"
+caption = "What Latent was sent for this tool call: nothing"
+sub = "Tool-only turns are skipped (skipped_tool_only)."
+hold = 5
+[[beat.action]]
+type = "click"
+target = {css = ".step.first-bad"}
+[[beat.expect]]
+type = "visible"
+target = {css = "#drawer"}
+[[beat.expect]]
+type = "text"
+target = {css = "#drawer-stock"}
+contains = "skipped_tool_only"
+
+[[beat]]
+id = "drawer_call_close"
+hold = 0.5
+[[beat.action]]
+type = "click"
+target = {css = "#drawer .close"}
+[[beat.expect]]
+type = "count"
+target = {css = "dialog[open]"}
+count = 0
+
+[[beat]]
+id = "drawer_answer"
+purpose = "For the final answer, the earlier call is replaced by a placeholder"
+caption = "For the final answer, the refund call reads [tool_calls omitted]"
+sub = "The adapter sends the call and its result as readable context."
+hold = 6
+[[beat.action]]
+type = "click"
+target = {css = ".step:last-child"}
+[[beat.expect]]
+type = "text"
+target = {css = "#drawer-stock"}
+contains = "[tool_calls omitted]"
+[[beat.expect]]
+type = "text"
+target = {css = "#drawer-adapter"}
+contains = "issue_refund"
+
+[[beat]]
+id = "drawer_answer_close"
+hold = 0.5
+[[beat.action]]
+type = "click"
+target = {css = "#drawer .close"}
+[[beat.expect]]
+type = "count"
+target = {css = "dialog[open]"}
+count = 0
+
+[[beat]]
+id = "result"
+purpose = "End on the summary card"
+caption = "Stock Latent: missed. With adapter: caught at step 4."
+sub = "Overall: 10/48 → 39/48 caught; tool calls 0/18 → 18/18."
+hold = 5
+[[beat.action]]
+type = "scroll"
+dy = 600
+[[beat.expect]]
+type = "visible"
+target = {css = "#summary"}
+[[beat.expect]]
+type = "text"
+target = {css = "#summary"}
+contains = "With adapter: caught at step 4."
+
+[[beat]]
+id = "end"
+hold = 0.5

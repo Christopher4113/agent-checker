@@ -1,0 +1,20 @@
+schema_version = 1
+
+# Replay mode only: every key is blanked (app/main.py would otherwise read ../.env) and the password gate is off.
+[app]
+run = "cd .. && env LATENT_API_KEY= LATENT_API_URL= OPENAI_API_KEY= ANTHROPIC_API_KEY= DEMO_PASSWORD= .venv/bin/uvicorn app.main:app --port 8767"
+url = "http://127.0.0.1:8767/"
+
+[[take]]
+web = "storyboard.toml"
+out = "takes/demo.mp4"
+
+[edit]
+file = "edit.toml"
+args = ["takes/demo.mp4"]
+
+[check]
+sources = ["takes/demo-final.mp4", "takes/demo-final-readme.gif"]
+review = "review"
+scan = true
+watch_for = ["lk_", "sk-", "gmail"]

@@ -1,0 +1,32 @@
+1
+00:00:00,026 --> 00:00:06,158
+Latent on agent steps: stock vs with latent_agents (Same agent, 24 tasks, 3 API paths. Real Latent scores.)
+
+2
+00:00:06,158 --> 00:00:13,915
+Responses API: the answer invents a date and an item (Stock sees no tool results and misses it. The adapter catches it.)
+
+3
+00:00:13,915 --> 00:00:21,863
+The agent refunds an order the user never mentioned (Stock: not scored. With adapter: arg not grounded.)
+
+4
+00:00:21,863 --> 00:00:30,668
+A clean run on Anthropic (Both pass: no false alarms.)
+
+5
+00:00:30,668 --> 00:00:42,375
+Back to the wrong-order refund
+
+6
+00:00:42,375 --> 00:00:48,307
+What Latent was sent for this tool call: nothing (Tool-only turns are skipped (skipped_tool_only).)
+
+7
+00:00:49,818 --> 00:00:56,946
+For the final answer, the refund call reads [tool_calls omitted] (The adapter sends the call and its result as readable context.)
+
+8
+00:00:58,517 --> 00:01:03,974
+Stock Latent: missed. With adapter: caught at step 4. (Overall: 10/48 → 39/48 caught; tool calls 0/18 → 18/18.)
+

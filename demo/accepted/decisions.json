@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "run_id": "ea8c996f81c54c4caa2204f369df49b6",
+  "binding": "31e137f589049693386675541fcffaf43ecba1212b10ef619151cc4a398f2f24",
+  "decisions": {
+    "show-me-the-gap/drawer_answer": "accepted",
+    "show-me-the-gap/drawer_answer_close": "accepted",
+    "show-me-the-gap/drawer_call": "accepted",
+    "show-me-the-gap/drawer_call_close": "accepted",
+    "show-me-the-gap/end": "accepted",
+    "show-me-the-gap/numbers": "accepted",
+    "show-me-the-gap/replay_fake_arg": "accepted",
+    "show-me-the-gap/result": "accepted",
+    "show-me-the-gap/tour_clean": "accepted",
+    "show-me-the-gap/tour_fake_arg": "accepted",
+    "show-me-the-gap/tour_responses": "accepted",
+    "video": "accepted"
+  },
+  "recorded_by": "reshoot accept",
+  "recorded_at": "2026-10-31T18:50:42+00:00"
+}

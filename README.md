@@ -4,6 +4,10 @@
 
 **Full write-up: [results/findings.md](results/findings.md)**
 
+[![The "Show me the gap" guided tour: stock Latent vs the latent_agents adapter on three agent runs](docs/demo/demo-final-readme.gif)](docs/demo/demo-final.mp4)
+
+*Captioned video: [docs/demo/demo-final.mp4](docs/demo/demo-final.mp4). Re-record after UI changes with `reshoot run demo/reshoot.toml`.*
+
 ## Results (24 scenarios × 3 API paths, real Latent API, planted hallucinations)
 
 | | Stock `auto_instrument()` | Stock + `context()` | With `latent_agents` |
