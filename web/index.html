@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latent for Agents</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="night">
+  <div class="wrap">
+    <div class="top">
+      <h1>Latent for Agents</h1>
+      <button class="link" id="how-open">How it works</button>
+    </div>
+    <p>Step-level hallucination scoring for tool-using agents, built on the runlatent SDK. Same agent, same 24 tasks, three API paths.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="stats" id="stats"></section>
+
+  <section class="controls">
+    <select id="scenario" aria-label="Scenario"></select>
+    <div class="seg" role="radiogroup" aria-label="API path">
+      <label><input type="radio" name="path" value="anthropic"><span>Anthropic</span></label>
+      <label><input type="radio" name="path" value="chat" checked><span>Chat Completions</span></label>
+      <label><input type="radio" name="path" value="responses"><span>Responses</span></label>
+    </div>
+    <button class="primary" id="run">▶ Run demo</button>
+    <button class="ghost" id="tour">Show me the gap</button>
+    <button class="ghost" id="live" hidden>Run live</button>
+    <span class="pill" id="live-pill" hidden>live</span>
+  </section>
+
+  <p class="caption" id="caption"></p>
+  <ol class="timeline" id="timeline"></ol>
+  <div class="summary" id="summary" hidden></div>
+</main>
+
+<dialog id="drawer">
+  <form method="dialog"><button class="close" aria-label="Close">×</button></form>
+  <h2 id="drawer-title"></h2>
+  <h3>Latent (stock) saw</h3>
+  <pre id="drawer-stock"></pre>
+  <h3>With adapter, Latent saw</h3>
+  <pre id="drawer-adapter"></pre>
+</dialog>
+
+<dialog id="how">
+  <form method="dialog"><button class="close" aria-label="Close">×</button></form>
+  <h2>How it works</h2>
+  <ol class="how">
+    <li><b>Agent</b><span>Calls tools through the OpenAI or Anthropic SDK, exactly as in production.</span></li>
+    <li><b>Latent SDK</b><span><code>auto_instrument()</code> scores each text answer. Tool-only turns are skipped, and on the Responses API the tool results are not sent.</span></li>
+    <li><b>Adapter</b><span><code>latent_agents</code> turns the conversation into steps, checks every tool argument against what the user and tools said, and scores answers with tool results as source via <code>check()</code>.</span></li>
+    <li><b>Trajectory view</b><span>Highest step risk, plus the first step that went wrong and why.</span></li>
+  </ol>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>

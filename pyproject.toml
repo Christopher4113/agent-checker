@@ -1,0 +1,9 @@
+[project]
+name = "latent-agents"
+version = "0.1.0"
+description = "Step-level hallucination scoring for tool-using agents, on top of runlatent"
+requires-python = ">=3.10"
+dependencies = ["runlatent>=0.3.9"]
+
+[tool.setuptools]
+packages = ["latent_agents"]

@@ -1,0 +1,44 @@
+{
+ "enabled": true,
+ "api_url": "https://app.runlatent.ai",
+ "stream_read": false,
+ "stream_read_source": "off",
+ "patched": [
+  "openai:Completions.create",
+  "openai:AsyncCompletions.create",
+  "openai:Responses.create",
+  "openai:AsyncResponses.create",
+  "anthropic:Messages.create",
+  "anthropic:AsyncMessages.create",
+  "anthropic:Messages.stream",
+  "anthropic:AsyncMessages.stream"
+ ],
+ "captured": 144,
+ "posted": 144,
+ "failed": 0,
+ "dropped": 0,
+ "queued": 0,
+ "skipped_tool_only": 198,
+ "post_tool_only_turns": false,
+ "errors": {},
+ "multimodal_parts_dropped": 132,
+ "checked": 315,
+ "check_adopted": 144,
+ "check_scored": 315,
+ "poster": {
+  "posted": 144,
+  "failed": 0,
+  "dropped": 0,
+  "retried": 0,
+  "lost": 0,
+  "unscored": 0,
+  "queued": 0,
+  "last_status": 200,
+  "consecutive_failures": 0
+ },
+ "enforce": {
+  "enabled": false,
+  "policy": null,
+  "last_decision": null
+ }
+}

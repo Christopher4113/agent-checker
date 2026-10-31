@@ -1,0 +1,7 @@
+anthropic==2.3.0
+fastapi==0.162.0
+openai==3.42.0
+PyYAML==6.0.3
+rich==15.0.0
+runlatent==0.3.9
+uvicorn==0.54.0

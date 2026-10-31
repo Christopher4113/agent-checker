@@ -1,0 +1,393 @@
+{
+ "recall": {
+  "A|anthropic|stock": {
+   "hits": 3,
+   "n": 6,
+   "pct": 50
+  },
+  "B|anthropic|stock": {
+   "hits": 0,
+   "n": 6,
+   "pct": 0
+  },
+  "C|anthropic|stock": {
+   "hits": 0,
+   "n": 4,
+   "pct": 0
+  },
+  "A|chat|stock": {
+   "hits": 4,
+   "n": 6,
+   "pct": 67
+  },
+  "B|chat|stock": {
+   "hits": 0,
+   "n": 6,
+   "pct": 0
+  },
+  "C|chat|stock": {
+   "hits": 2,
+   "n": 4,
+   "pct": 50
+  },
+  "A|responses|stock": {
+   "hits": 1,
+   "n": 6,
+   "pct": 17
+  },
+  "B|responses|stock": {
+   "hits": 0,
+   "n": 6,
+   "pct": 0
+  },
+  "C|responses|stock": {
+   "hits": 0,
+   "n": 4,
+   "pct": 0
+  },
+  "A|anthropic|stock_ctx": {
+   "hits": 3,
+   "n": 6,
+   "pct": 50
+  },
+  "B|anthropic|stock_ctx": {
+   "hits": 0,
+   "n": 6,
+   "pct": 0
+  },
+  "C|anthropic|stock_ctx": {
+   "hits": 0,
+   "n": 4,
+   "pct": 0
+  },
+  "A|chat|stock_ctx": {
+   "hits": 4,
+   "n": 6,
+   "pct": 67
+  },
+  "B|chat|stock_ctx": {
+   "hits": 0,
+   "n": 6,
+   "pct": 0
+  },
+  "C|chat|stock_ctx": {
+   "hits": 2,
+   "n": 4,
+   "pct": 50
+  },
+  "A|responses|stock_ctx": {
+   "hits": 1,
+   "n": 6,
+   "pct": 17
+  },
+  "B|responses|stock_ctx": {
+   "hits": 0,
+   "n": 6,
+   "pct": 0
+  },
+  "C|responses|stock_ctx": {
+   "hits": 0,
+   "n": 4,
+   "pct": 0
+  },
+  "A|anthropic|adapter": {
+   "hits": 5,
+   "n": 6,
+   "pct": 83
+  },
+  "B|anthropic|adapter": {
+   "hits": 6,
+   "n": 6,
+   "pct": 100
+  },
+  "C|anthropic|adapter": {
+   "hits": 2,
+   "n": 4,
+   "pct": 50
+  },
+  "A|chat|adapter": {
+   "hits": 5,
+   "n": 6,
+   "pct": 83
+  },
+  "B|chat|adapter": {
+   "hits": 6,
+   "n": 6,
+   "pct": 100
+  },
+  "C|chat|adapter": {
+   "hits": 2,
+   "n": 4,
+   "pct": 50
+  },
+  "A|responses|adapter": {
+   "hits": 5,
+   "n": 6,
+   "pct": 83
+  },
+  "B|responses|adapter": {
+   "hits": 6,
+   "n": 6,
+   "pct": 100
+  },
+  "C|responses|adapter": {
+   "hits": 2,
+   "n": 4,
+   "pct": 50
+  }
+ },
+ "false_flag": {
+  "anthropic|stock": {
+   "hits": 0,
+   "n": 8,
+   "pct": 0
+  },
+  "chat|stock": {
+   "hits": 0,
+   "n": 8,
+   "pct": 0
+  },
+  "responses|stock": {
+   "hits": 5,
+   "n": 8,
+   "pct": 62
+  },
+  "anthropic|stock_ctx": {
+   "hits": 0,
+   "n": 8,
+   "pct": 0
+  },
+  "chat|stock_ctx": {
+   "hits": 0,
+   "n": 8,
+   "pct": 0
+  },
+  "responses|stock_ctx": {
+   "hits": 5,
+   "n": 8,
+   "pct": 62
+  },
+  "anthropic|adapter": {
+   "hits": 0,
+   "n": 8,
+   "pct": 0
+  },
+  "chat|adapter": {
+   "hits": 0,
+   "n": 8,
+   "pct": 0
+  },
+  "responses|adapter": {
+   "hits": 0,
+   "n": 8,
+   "pct": 0
+  }
+ },
+ "not_scored": {
+  "anthropic|stock": {
+   "hits": 33,
+   "n": 57,
+   "pct": 58
+  },
+  "chat|stock": {
+   "hits": 33,
+   "n": 57,
+   "pct": 58
+  },
+  "responses|stock": {
+   "hits": 33,
+   "n": 57,
+   "pct": 58
+  },
+  "anthropic|stock_ctx": {
+   "hits": 33,
+   "n": 57,
+   "pct": 58
+  },
+  "chat|stock_ctx": {
+   "hits": 33,
+   "n": 57,
+   "pct": 58
+  },
+  "responses|stock_ctx": {
+   "hits": 33,
+   "n": 57,
+   "pct": 58
+  },
+  "anthropic|adapter": {
+   "hits": 0,
+   "n": 57,
+   "pct": 0
+  },
+  "chat|adapter": {
+   "hits": 0,
+   "n": 57,
+   "pct": 0
+  },
+  "responses|adapter": {
+   "hits": 0,
+   "n": 57,
+   "pct": 0
+  }
+ },
+ "no_source": {
+  "anthropic|stock": {
+   "hits": 0,
+   "n": 24,
+   "pct": 0
+  },
+  "chat|stock": {
+   "hits": 0,
+   "n": 24,
+   "pct": 0
+  },
+  "responses|stock": {
+   "hits": 24,
+   "n": 24,
+   "pct": 100
+  },
+  "anthropic|stock_ctx": {
+   "hits": 0,
+   "n": 24,
+   "pct": 0
+  },
+  "chat|stock_ctx": {
+   "hits": 0,
+   "n": 24,
+   "pct": 0
+  },
+  "responses|stock_ctx": {
+   "hits": 0,
+   "n": 24,
+   "pct": 0
+  }
+ },
+ "first_bad_step": {
+  "anthropic|stock": {
+   "hits": 3,
+   "n": 16,
+   "pct": 19
+  },
+  "chat|stock": {
+   "hits": 6,
+   "n": 16,
+   "pct": 38
+  },
+  "responses|stock": {
+   "hits": 1,
+   "n": 16,
+   "pct": 6
+  },
+  "anthropic|stock_ctx": {
+   "hits": 3,
+   "n": 16,
+   "pct": 19
+  },
+  "chat|stock_ctx": {
+   "hits": 6,
+   "n": 16,
+   "pct": 38
+  },
+  "responses|stock_ctx": {
+   "hits": 1,
+   "n": 16,
+   "pct": 6
+  },
+  "anthropic|adapter": {
+   "hits": 13,
+   "n": 16,
+   "pct": 81
+  },
+  "chat|adapter": {
+   "hits": 13,
+   "n": 16,
+   "pct": 81
+  },
+  "responses|adapter": {
+   "hits": 13,
+   "n": 16,
+   "pct": 81
+  }
+ },
+ "headline": {
+  "caught": {
+   "stock": {
+    "hits": 10,
+    "n": 48,
+    "pct": 21
+   },
+   "stock_ctx": {
+    "hits": 10,
+    "n": 48,
+    "pct": 21
+   },
+   "adapter": {
+    "hits": 39,
+    "n": 48,
+    "pct": 81
+   }
+  },
+  "tool_caught": {
+   "stock": {
+    "hits": 0,
+    "n": 18,
+    "pct": 0
+   },
+   "stock_ctx": {
+    "hits": 0,
+    "n": 18,
+    "pct": 0
+   },
+   "adapter": {
+    "hits": 18,
+    "n": 18,
+    "pct": 100
+   }
+  },
+  "first_bad_step": {
+   "stock": {
+    "hits": 10,
+    "n": 48,
+    "pct": 21
+   },
+   "stock_ctx": {
+    "hits": 10,
+    "n": 48,
+    "pct": 21
+   },
+   "adapter": {
+    "hits": 39,
+    "n": 48,
+    "pct": 81
+   }
+  },
+  "clean_false_alarm": {
+   "stock": {
+    "hits": 5,
+    "n": 24,
+    "pct": 21
+   },
+   "stock_ctx": {
+    "hits": 5,
+    "n": 24,
+    "pct": 21
+   },
+   "adapter": {
+    "hits": 0,
+    "n": 24,
+    "pct": 0
+   }
+  }
+ },
+ "adapter_ms_per_step_p50": 255,
+ "adapter_scores_used": 171,
+ "sdk_stats": {
+  "captured": 144,
+  "posted": 144,
+  "failed": 0,
+  "dropped": 0,
+  "skipped_tool_only": 198,
+  "check_adopted": 144,
+  "check_scored": 315
+ }
+}
